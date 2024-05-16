@@ -15,7 +15,7 @@ export const sendMail = async(to: string, subject: string, token: string) => {
             subject: `Password Reset: ${subject}`,
             text: `
                 Click on the link below to reset your password:
-                http://localhost:3000/reset-password/${token}
+                http://localhost:5173/reset-password/${token}
             `
         }
     
