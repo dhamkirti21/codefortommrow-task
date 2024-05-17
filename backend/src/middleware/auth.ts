@@ -1,8 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
-const secretKey:any = "SECRET";
-console.log("secret",secretKey);
+const secretKey:any = process.env.JWT_SECRET;
 
 export function generateToken(payload: any): string {
     return jwt.sign(payload, secretKey,{
